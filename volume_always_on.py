@@ -17,7 +17,7 @@ def set_volume_to_maximum():
             current_device = AudioUtilities.GetSpeakers()
             interface = current_device.Activate(IAudioEndpointVolume._iid_, comtypes.CLSCTX_ALL, None)
             volume = cast(interface, POINTER(IAudioEndpointVolume))
-        volume.SetMasterVolumeLevelScalar(0.5, None)
+        volume.SetMasterVolumeLevelScalar(0.65, None)
         volume.SetMute(0,None)
         time.sleep(10)
     
